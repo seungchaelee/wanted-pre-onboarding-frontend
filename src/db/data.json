@@ -1,0 +1,46 @@
+{
+  "signup": [
+    {
+      "email": "1234@naver.com",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "email": "5678@naver.com",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "email": "123@naer",
+      "password": "123@naer",
+      "id": 3
+    },
+    {
+      "email": "email@naver",
+      "password": "email@naver",
+      "id": 4
+    },
+    {
+      "email": "onSubmitHandle@naver",
+      "password": "onSubmitHandle@",
+      "id": 5
+    }
+  ],
+  "todos": [
+    {
+      "todo": "집 가가ㅣ",
+      "isCompleted": false,
+      "id": 2
+    },
+    {
+      "todo": "머리 펌",
+      "isCompleted": false,
+      "id": 3
+    },
+    {
+      "todo": "출바알",
+      "isCompleted": false,
+      "id": 4
+    }
+  ]
+}

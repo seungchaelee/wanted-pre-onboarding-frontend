@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  position: relative;
+}
+
+.header .menu {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.header .link {
+  border: 2px solid #333;
+  padding: 10px;
+  margin-left: 15px;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.signup-button,
+.signin-button {
+  margin-top: 10px;
+  padding: 0;
+  width: 150px;
+  height: 30px;
+  border: none;
+  background-color: pink;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+
+  &:disabled {
+    background-color: #FFE4E1;
+  }
+}
