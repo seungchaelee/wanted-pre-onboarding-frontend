@@ -3,9 +3,9 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 
 export default function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password1, setPassword1] = useState('');
-  const [password2, setPassword2] = useState('');
+  const [email, setEmail] = useState("");
+  const [password1, setPassword1] = useState("");
+  const [password2, setPassword2] = useState("");
   const [isbutton, setIsButton] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -13,7 +13,9 @@ export default function SignUp() {
   const passwordRef = useRef(null);
 
   function changeButton() {
-    email.includes('@') && password1.length >= 8 && password2.length >= 8 ? setIsButton(false) : setIsButton(true);
+    email.includes("@") && password1.length >= 8 && password2.length >= 8
+      ? setIsButton(false)
+      : setIsButton(true);
   }
 
   const onSubmitHandle = async (e) => {
@@ -28,11 +30,11 @@ export default function SignUp() {
       const res = await fetch(`http://localhost:3001/signup/`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email,
-          password
+          password,
         }),
       });
 
@@ -41,16 +43,15 @@ export default function SignUp() {
           alert(`${email}로 회원가입 완료`);
           navigate(`/signin`);
           setIsLoading(false);
-        }
-        else {
-          alert('비번 확인 바람');
+        } else {
+          alert("비번 확인 바람");
         }
       }
       const data = await res.json();
 
       return data;
     }
-  }
+  };
 
   return (
     <form onSubmit={onSubmitHandle}>
@@ -61,7 +62,7 @@ export default function SignUp() {
             placeholder="이메일"
             data-testid="email-input"
             className="email-input"
-            onChange={e => {
+            onChange={(e) => {
               setEmail(e.target.value);
             }}
             onKeyUp={changeButton}
@@ -74,7 +75,7 @@ export default function SignUp() {
             placeholder="비밀번호"
             data-testid="password-input"
             className="lassword-input"
-            onChange={e => {
+            onChange={(e) => {
               setPassword1(e.target.value);
             }}
             onKeyUp={changeButton}
@@ -87,7 +88,7 @@ export default function SignUp() {
             placeholder="비밀번호 확인"
             data-testid="password-input"
             className="lassword-input"
-            onChange={e => {
+            onChange={(e) => {
               setPassword2(e.target.value);
             }}
             onKeyUp={changeButton}
@@ -99,7 +100,9 @@ export default function SignUp() {
             data-testid="signup-button"
             className="signup-button"
             disabled={isbutton}
-          >회원가입</button>
+          >
+            회원가입
+          </button>
         </LabelWrapper>
       </InputWrapper>
     </form>

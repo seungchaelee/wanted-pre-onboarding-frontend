@@ -7,8 +7,6 @@ export default function TodoList({ todos }) {
   const [mode, setMode] = useState(false);
   const [isbutton, setIsButton] = useState(true);
   const [isDone, setIsDone] = useState(todos.isCompleted);
-
-
   const editedText = useRef(null);
 
   function openEdit() {
@@ -24,11 +22,11 @@ export default function TodoList({ todos }) {
     const res = await fetch(`http://localhost:3001/todos/${todo.id}`, {
       method: "PUT",
       headers: {
-        'content-Type': 'application/json',
+        "content-Type": "application/json",
       },
       body: JSON.stringify({
         ...todos,
-        isCompleted: !isDone
+        isCompleted: !isDone,
       }),
     });
 
@@ -38,15 +36,15 @@ export default function TodoList({ todos }) {
     const data = await res.json();
 
     return data;
-  }
+  };
 
   async function changeEdit() {
     const text = editedText.current.value;
-    console.log(text)
+    console.log(text);
     const res = await fetch(`http://localhost:3001/todos/${todo.id}`, {
       method: "PATCH",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         todo: text,
@@ -62,7 +60,7 @@ export default function TodoList({ todos }) {
   async function del() {
     if (!isLoading) {
       setIsLoading(true);
-      if (window.confirm('삭제 ?')) {
+      if (window.confirm("삭제 ?")) {
         const res = await fetch(`http://localhost:3001/todos/${todo.id}`, {
           method: "DELETE",
         });
@@ -73,7 +71,7 @@ export default function TodoList({ todos }) {
             id: 0,
           });
           setIsLoading(false);
-          alert('삭제 완료');
+          alert("삭제 완료");
         }
         const data = await res.json();
 
@@ -92,23 +90,19 @@ export default function TodoList({ todos }) {
         <LabelWrapper>
           <li className={isDone ? "off" : ""}>
             <label>
-              <input
-                type="checkbox"
-                checked={isDone}
-                onChange={toggleDone}
-              />
+              <input type="checkbox" checked={isDone} onChange={toggleDone} />
               <span>{todos.todo}</span>
               <button
                 type="submit"
                 data-testid="modify-button"
                 onClick={openEdit}
                 disabled={!isbutton}
-              >수정</button>
-              <button
-                type="submit"
-                data-testid="delete-button"
-                onClick={del}
-              >삭제</button>
+              >
+                수정
+              </button>
+              <button type="submit" data-testid="delete-button" onClick={del}>
+                삭제
+              </button>
             </label>
           </li>
         </LabelWrapper>
@@ -125,15 +119,18 @@ export default function TodoList({ todos }) {
                 type="submit"
                 data-testid="submit-button"
                 onClick={changeEdit}
-              >수정하기</button>
+              >
+                수정하기
+              </button>
               <button
                 type="submit"
                 datta-testid="cancel-button"
                 onClick={cancelEdit}
-              >취소</button>
+              >
+                취소
+              </button>
             </li>
           </form>
-
         </LabelWrapper>
       )}
     </>

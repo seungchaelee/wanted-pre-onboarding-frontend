@@ -13,9 +13,9 @@ export default function Todo() {
         <LabelWrapper>
           <CreateTodo />
         </LabelWrapper>
-        {todos.map((todo, i) =>
+        {todos.map((todo, i) => (
           <TodoList todos={todo} key={todo.id} />
-        )}
+        ))}
       </Wrapper>
     </>
   );

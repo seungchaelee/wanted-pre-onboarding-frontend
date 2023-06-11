@@ -15,7 +15,7 @@ export default function CreateTodo() {
       const res = await fetch(`http://localhost:3001/todos/`, {
         method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           todo,
@@ -33,19 +33,14 @@ export default function CreateTodo() {
 
       return data;
     }
-  }
+  };
 
   return (
     <form onSubmit={CreateTodo}>
-      <input
-        data-testid="new-todo-input"
-        ref={todoRef}
-        placeholder="할 일"
-      />
-      <button
-        type="submit"
-        data-testid="new-todo-add-button"
-      >추가</button>
+      <input data-testid="new-todo-input" ref={todoRef} placeholder="할 일" />
+      <button type="submit" data-testid="new-todo-add-button">
+        추가
+      </button>
     </form>
   );
 }
