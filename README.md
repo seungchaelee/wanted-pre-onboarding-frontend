@@ -50,7 +50,7 @@ npm run dev
 
 #### Assignment 1
 
-- [O] 회원가입과 로그인 페이지에 이메일과 비밀번호의 유효성 검사기능을 구현해주세요
+- [v] 회원가입과 로그인 페이지에 이메일과 비밀번호의 유효성 검사기능을 구현해주세요
 
   - [O] 이메일 조건: `@` 포함
   - [O] 비밀번호 조건: 8자 이상
@@ -105,7 +105,7 @@ npm run dev
 
 - [O] TODO 우측에 수정버튼과 삭제 버튼을 만들어주세요
 
-  - [O] 수정 버튼에는 `data-testid="modify-button"` 속성을 부여해주세요
+  - [v] 수정 버튼에는 `data-testid="modify-button"` 속성을 부여해주세요
   - [O] 삭제 버튼에는 `data-testid="delete-button"` 속성을 부여해주세요
 
 #### Assignment 9
