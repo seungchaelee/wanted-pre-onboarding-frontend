@@ -28,7 +28,7 @@
   ],
   "todos": [
     {
-      "todo": "집 가가ㅣ",
+      "todo": "집가기",
       "isCompleted": false,
       "id": 2
     },
@@ -38,7 +38,7 @@
       "id": 3
     },
     {
-      "todo": "출바알",
+      "todo": "나도",
       "isCompleted": false,
       "id": 4
     }

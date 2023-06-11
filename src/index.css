@@ -47,3 +47,8 @@ code {
     background-color: #FFE4E1;
   }
 }
+
+.off label {
+  background: #eee;
+  color: #ccc;
+}
