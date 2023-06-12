@@ -77,6 +77,8 @@ npm run dev
 
 ---
 
+![TODO LIST](gif/ezgif.com-video-to-gif%20(1).gif)
+
 ### :: 2. TODO LIST
 
 #### Assignment 5
