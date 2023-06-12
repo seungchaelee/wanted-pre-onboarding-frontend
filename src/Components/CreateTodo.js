@@ -20,7 +20,6 @@ export default function CreateTodo() {
         body: JSON.stringify({
           todo,
           isCompleted: false,
-          // userId
         }),
       });
 
