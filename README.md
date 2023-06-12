@@ -22,6 +22,7 @@ npm start
 # Visit http://localhost:3000 from your browser (Chrome)
 ```
 
+제공해주신 API에서 {"statusCode":404,"message":"Cannot GET /","error":"Not Found"} 떠서 json-server를 따로 만들어 진행 하였습니다.
 ```sh
 서버랑 통신하기
 npm run dev
