@@ -29,7 +29,7 @@ npm run dev
 # Visit http://localhost:3001/todos from your browser (Chrome)
 ```
 
-[label](gif/ezgif.com-video-to-gif.gif)
+![회원가입 로그인](gif/ezgif.com-video-to-gif.gif)
 
 ### :: 1. 로그인 / 회원가입
 
