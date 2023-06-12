@@ -29,7 +29,7 @@ npm run dev
 # Visit http://localhost:3001/todos from your browser (Chrome)
 ```
 
-https://vscode.dev/github/seungchaelee/wanted-pre-onboarding-frontend/blob/master/gif/ezgif.com-video-to-gif.gif
+[label](gif/ezgif.com-video-to-gif.gif)
 
 ### :: 1. 로그인 / 회원가입
 
