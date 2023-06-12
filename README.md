@@ -6,7 +6,6 @@ wanted-pre-onboarding-frontend 프로젝트🎖
 - 문의는 id4720@gmail.com
 - 지원자 이름: 이승채
 -
-
 ## Setup (사전 설치)
 
 Install dependencies
@@ -30,8 +29,8 @@ npm run dev
 # Visit http://localhost:3001/todos from your browser (Chrome)
 ```
 
-배포 사이트
-1. [wanted-pre-onboarding-frontend](https://stunning-kringle-c4cb1e.netlify.app)
+https://vscode.dev/github/seungchaelee/wanted-pre-onboarding-frontend/blob/master/gif/ezgif.com-video-to-gif.gif
+
 
 ### :: 1. 로그인 / 회원가입
 
