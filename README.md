@@ -30,8 +30,7 @@ npm run dev
 # Visit http://localhost:3001/todos from your browser (Chrome)
 ```
 
-배포 사이트
-1. [wanted-pre-onboarding-frontend](https://stunning-kringle-c4cb1e.netlify.app)
+![Uploading ezgif.com-video-to-gif.gif…]()
 
 ### :: 1. 로그인 / 회원가입
 
