@@ -28,6 +28,7 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
           }}
           role="button"
           tabIndex={0}
+          checked={isCompleted}
         >
           {/* {isCompleted ? (
             <FontAwesomeIcon className={styles.checkBox} icon={faSquareCheck} size="2x" />
