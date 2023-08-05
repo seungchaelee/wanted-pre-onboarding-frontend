@@ -20,7 +20,7 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
   return (
     <div>
       <li>
-        <span
+        <input
           type="checkbox"
           onClick={() => {
             onToggle(id);
@@ -29,12 +29,12 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
           role="button"
           tabIndex={0}
         >
-          {isCompleted ? (
+          {/* {isCompleted ? (
             <FontAwesomeIcon className={styles.checkBox} icon={faSquareCheck} size="2x" />
           ) : (
             <FontAwesomeIcon className={styles.checkBox} icon={faSquare} size="2x" />
-          )}
-        </span>
+          )} */}
+        </input>
 
         <TodoEdit
           idx={idx}
