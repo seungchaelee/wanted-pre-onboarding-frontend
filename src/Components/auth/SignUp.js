@@ -13,7 +13,7 @@ export default function SignUp() {
   const passwordRef = useRef(null);
 
   function changeButton() {
-    email.includes("@") && password1.length >= 8 && password2.length >= 8
+    email.includes("@") && password1.length >= 8 && password2.length >= 8 && password1 === password2
       ? setIsButton(false)
       : setIsButton(true);
   }
