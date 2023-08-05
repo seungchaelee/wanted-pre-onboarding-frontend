@@ -14,7 +14,7 @@ export default function SignIn() {
       ? setIsButton(false)
       : setIsButton(true);
   }
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
   };
 
@@ -24,27 +24,31 @@ export default function SignIn() {
       password,
     };
     try {
-      const response = await axios.post(`https://www.pre-onboarding-selection-task.shop/auth/signin`, data, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await axios.post(
+        `https://www.pre-onboarding-selection-task.shop/auth/signin`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.data.access_token) {
-        localStorage.setItem('access_token', response.data.access_token);
+        localStorage.setItem("access_token", response.data.access_token);
       }
       if (response.status === 200) {
-        navigate('/todo', { replace: true });
+        navigate("/todo", { replace: true });
       }
     } catch (error) {
       console.error(error);
-      alert('존재하지 않는 계정입니다. 회원가입을 진행해주세요.');
+      alert("존재하지 않는 계정입니다. 회원가입을 진행해주세요.");
     }
   }
 
   useEffect(() => {
-    if (localStorage.getItem('access_token')) {
-      navigate('/todo', { replace: true });
+    if (localStorage.getItem("access_token")) {
+      navigate("/todo", { replace: true });
     }
   }, [navigate]);
 

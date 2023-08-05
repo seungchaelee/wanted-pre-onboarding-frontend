@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen, faPenToSquare, faX } from '@fortawesome/free-solid-svg-icons';
-import styles from './TodoEdit.module.css';
+import React, { useState, useRef, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen, faPenToSquare, faX } from "@fortawesome/free-solid-svg-icons";
+import styles from "./TodoEdit.module.css";
 
 function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
   const { id, todo, isCompleted } = todos;
@@ -43,16 +43,26 @@ function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
             data-testid="modify-input"
             type="text"
             ref={editInputRef}
-            value={newTodo || ''}
+            value={newTodo || ""}
             maxLength="15"
             placeholder="할일을 수정주세요 (15자 이내)"
-            onChange={e => setNewTodo(e.target.value)}
+            onChange={(e) => setNewTodo(e.target.value)}
             className={styles.changeInput}
           />
-          <button data-testid="submit-button" className={styles.changeDone} type="button" onClick={() => changeDone()}>
+          <button
+            data-testid="submit-button"
+            className={styles.changeDone}
+            type="button"
+            onClick={() => changeDone()}
+          >
             <FontAwesomeIcon icon={faPen} className={styles.pen} />
           </button>
-          <button data-testid="cancel-button" className={styles.changeCancel} type="button" onClick={() => changeCancel()}>
+          <button
+            data-testid="cancel-button"
+            className={styles.changeCancel}
+            type="button"
+            onClick={() => changeCancel()}
+          >
             <FontAwesomeIcon icon={faX} className={styles.x} />
           </button>
         </>
@@ -84,7 +94,11 @@ function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
             </em>
           )}
 
-          <button data-testid="modify-button" type="button" onClick={() => textChange()}>
+          <button
+            data-testid="modify-button"
+            type="button"
+            onClick={() => textChange()}
+          >
             <FontAwesomeIcon icon={faPenToSquare} className={styles.pen} />
           </button>
         </>

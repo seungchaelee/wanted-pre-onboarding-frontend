@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-import { faSquareCheck, faSquare } from '@fortawesome/free-regular-svg-icons';
+import { faSquareCheck, faSquare } from "@fortawesome/free-regular-svg-icons";
 
-import TodoEdit from '../todoEdit/TodoEdit';
-import styles from './TodoItem.module.css';
+import TodoEdit from "../todoEdit/TodoEdit";
+import styles from "./TodoItem.module.css";
 
 function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
   const { id, todo, isCompleted } = todos;
@@ -45,7 +45,11 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
           updateData={updateData}
           onToggle={onToggle}
         />
-        <button data-testid="delete-button" onClick={() => deleteData(id)} type="button">
+        <button
+          data-testid="delete-button"
+          onClick={() => deleteData(id)}
+          type="button"
+        >
           <FontAwesomeIcon icon={faTrash} className={styles.trash} />
         </button>
       </li>

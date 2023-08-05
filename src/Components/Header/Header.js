@@ -6,8 +6,8 @@ export default function Header() {
   const navigate = useNavigate();
 
   const logout = () => {
-    localStorage.clear('access_token');
-    navigate('../', { replace: true });
+    localStorage.clear("access_token");
+    navigate("../", { replace: true });
   };
 
   return (
@@ -33,4 +33,4 @@ export default function Header() {
       </div>
     </>
   );
-};
+}

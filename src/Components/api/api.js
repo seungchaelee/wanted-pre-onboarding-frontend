@@ -1,23 +1,23 @@
-import axios from 'axios';
+import axios from "axios";
 
-const baseURL = 'https://www.pre-onboarding-selection-task.shop';
+const baseURL = "https://www.pre-onboarding-selection-task.shop";
 
 const getApi = async () => {
   const response = await axios.get(`${baseURL}/todos`, {
     headers: {
-      Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+      Authorization: `Bearer ${localStorage.getItem("access_token")}`,
     },
   });
   return response;
 };
 
-const postApi = async text => {
+const postApi = async (text) => {
   const data = JSON.stringify({
     todo: text,
   });
   const response = await axios.post(`${baseURL}/todos`, data, {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.access_token}`,
     },
   });
@@ -31,14 +31,14 @@ const putApi = async (id, status, newTodo) => {
   });
   const response = await axios.delete(`${baseURL}/todos/${id}`, data, {
     headers: {
-      'Content-type': 'application/json',
+      "Content-type": "application/json",
       Authorization: `Bearer ${localStorage.access_token}`,
     },
   });
   return response;
 };
 
-const delApi = async id => {
+const delApi = async (id) => {
   const response = await axios.delete(`${baseURL}/todos/${id}`, {
     headers: {
       Authorization: `Bearer ${localStorage.access_token}`,

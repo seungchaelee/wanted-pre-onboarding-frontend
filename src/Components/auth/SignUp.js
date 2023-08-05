@@ -13,12 +13,15 @@ export default function SignUp() {
   const passwordRef = useRef(null);
 
   function changeButton() {
-    email.includes("@") && password1.length >= 8 && password2.length >= 8 && password1 === password2
+    email.includes("@") &&
+    password1.length >= 8 &&
+    password2.length >= 8 &&
+    password1 === password2
       ? setIsButton(false)
       : setIsButton(true);
   }
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault();
   };
 
@@ -50,20 +53,23 @@ export default function SignUp() {
     const password = passwordRef.current.value;
 
     try {
-      const res = await fetch(`https://www.pre-onboarding-selection-task.shop/auth/signup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+      const res = await fetch(
+        `https://www.pre-onboarding-selection-task.shop/auth/signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
 
       if (res.status === 201) {
-        alert('회원가입이 완료되었습니다.');
-        navigate('/signin', { replace: true });
+        alert("회원가입이 완료되었습니다.");
+        navigate("/signin", { replace: true });
       }
 
       if (res.status === 400) {
@@ -75,8 +81,8 @@ export default function SignUp() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem('access_token')) {
-      navigate('/todo', { replace: true });
+    if (localStorage.getItem("access_token")) {
+      navigate("/todo", { replace: true });
     }
   }, [navigate]);
 

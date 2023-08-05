@@ -1,26 +1,26 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
-import styles from './TodoInput.module.css';
+import styles from "./TodoInput.module.css";
 
 function TodoInput({ createData }) {
   const textRef = useRef();
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
-  const changeInput = e => {
+  const changeInput = (e) => {
     const { value } = e.target;
     setText(value);
   };
 
   const onSubmit = useCallback(
-    e => {
+    (e) => {
       e.preventDefault();
       if (!text) return;
       createData(text);
-      setText('');
+      setText("");
     },
-    [text],
+    [text]
   );
 
   useEffect(() => {
@@ -39,7 +39,11 @@ function TodoInput({ createData }) {
         ref={textRef}
       />
       <button data-testid="new-todo-add-button" type="submit">
-        <FontAwesomeIcon icon={faCirclePlus} size="3x" className={styles.plusIcon} />
+        <FontAwesomeIcon
+          icon={faCirclePlus}
+          size="3x"
+          className={styles.plusIcon}
+        />
       </button>
     </form>
   );
