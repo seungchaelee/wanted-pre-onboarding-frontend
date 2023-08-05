@@ -81,6 +81,7 @@ export default function SignUp() {
   return (
     <form onSubmit={onSubmit}>
       <InputWrapper>
+        회원가입
         <LabelWrapper>
           <input
             type="email"

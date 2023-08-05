@@ -5,7 +5,7 @@ wanted-pre-onboarding-frontend 프로젝트🎖
 - **반드시 아래 Setup과 Development 부분을 읽어보세요.**
 - 문의는 id4720@gmail.com
 - 지원자 이름: 이승채
--
+- 배포: [wanted](https://wanted-pre-onboarding-frontend-henna-sigma.vercel.app/)
 ## Setup (사전 설치)
 
 Install dependencies
@@ -21,8 +21,6 @@ React 시작하기
 npm start
 # Visit http://localhost:3000 from your browser (Chrome)
 ```
-
-![회원가입 로그인](gif/ezgif.com-video-to-gif.gif)
 
 ### :: 1. 로그인 / 회원가입
 
@@ -69,8 +67,6 @@ npm start
   - [X] 로컬 스토리지에 토큰이 없는 상태로 `/todo`페이지에 접속한다면 `/signin` 경로로 리다이렉트 시켜주세요
 
 ---
-
-![TODO LIST](gif/ezgif.com-video-to-gif%20(1).gif)
 
 ### :: 2. TODO LIST
 

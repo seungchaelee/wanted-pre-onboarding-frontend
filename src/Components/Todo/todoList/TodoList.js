@@ -4,7 +4,7 @@ import styles from './TodoList.module.css';
 
 function TodoList({ todos, updateData, deleteData, onToggle }) {
   return (
-    <ul className={styles.TodoList}>
+    <li className={styles.TodoList}>
       {todos.map((data, i) => (
         <TodoItem
           key={data.id}
@@ -15,7 +15,7 @@ function TodoList({ todos, updateData, deleteData, onToggle }) {
           onToggle={onToggle}
         />
       ))}
-    </ul>
+    </li>
   );
 }
 

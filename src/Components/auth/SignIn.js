@@ -51,6 +51,7 @@ export default function SignIn() {
   return (
     <form onSubmit={onSubmit}>
       <InputWrapper>
+        로그인
         <LabelWrapper>
           <input
             type="email"
