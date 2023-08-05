@@ -40,6 +40,7 @@ function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
       {status ? (
         <>
           <input
+            data-testid="modify-input"
             type="text"
             ref={editInputRef}
             value={newTodo || ''}
@@ -48,10 +49,10 @@ function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
             onChange={e => setNewTodo(e.target.value)}
             className={styles.changeInput}
           />
-          <button className={styles.changeDone} type="button" onClick={() => changeDone()}>
+          <button data-testid="submit-button" className={styles.changeDone} type="button" onClick={() => changeDone()}>
             <FontAwesomeIcon icon={faPen} className={styles.pen} />
           </button>
-          <button className={styles.changeCancel} type="button" onClick={() => changeCancel()}>
+          <button data-testid="cancel-button" className={styles.changeCancel} type="button" onClick={() => changeCancel()}>
             <FontAwesomeIcon icon={faX} className={styles.x} />
           </button>
         </>
@@ -83,7 +84,7 @@ function TodoEdit({ todos, check, setCheck, updateData, onToggle }) {
             </em>
           )}
 
-          <button type="button" onClick={() => textChange()}>
+          <button data-testid="modify-button" type="button" onClick={() => textChange()}>
             <FontAwesomeIcon icon={faPenToSquare} className={styles.pen} />
           </button>
         </>

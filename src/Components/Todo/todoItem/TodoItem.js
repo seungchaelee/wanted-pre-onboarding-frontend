@@ -21,6 +21,7 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
     <div>
       <li>
         <span
+          type="checkbox"
           onClick={() => {
             onToggle(id);
             checkBox();
@@ -43,7 +44,7 @@ function TodoItem({ idx, todos, updateData, deleteData, onToggle }) {
           updateData={updateData}
           onToggle={onToggle}
         />
-        <button onClick={() => deleteData(id)} type="button">
+        <button data-testid="delete-button" onClick={() => deleteData(id)} type="button">
           <FontAwesomeIcon icon={faTrash} className={styles.trash} />
         </button>
       </li>

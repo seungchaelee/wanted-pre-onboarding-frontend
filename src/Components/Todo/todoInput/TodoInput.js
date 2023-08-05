@@ -30,6 +30,7 @@ function TodoInput({ createData }) {
   return (
     <form className={styles.toDoInput} onSubmit={onSubmit}>
       <input
+        data-testid="new-todo-input"
         maxLength="15"
         type="text"
         value={text}
@@ -37,7 +38,7 @@ function TodoInput({ createData }) {
         onChange={changeInput}
         ref={textRef}
       />
-      <button type="submit">
+      <button data-testid="new-todo-add-button" type="submit">
         <FontAwesomeIcon icon={faCirclePlus} size="3x" className={styles.plusIcon} />
       </button>
     </form>
