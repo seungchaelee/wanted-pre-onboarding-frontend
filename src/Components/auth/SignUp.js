@@ -46,12 +46,10 @@ export default function SignUp() {
   // };
 
   const signUpSubmit = async (e) => {
-    if (!isLoading && emailRef.current && passwordRef.current) {
-      setIsLoading(true);
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
-      const email = emailRef.current.value;
-      const password = passwordRef.current.value;
-
+    try {
       const res = await fetch(`https://www.pre-onboarding-selection-task.shop/auth/signup`, {
         method: "POST",
         headers: {
@@ -66,9 +64,13 @@ export default function SignUp() {
       if (res.status === 201) {
         alert('회원가입이 완료되었습니다.');
         navigate('/signin', { replace: true });
-      } else if (res.status === 400) {
+      }
+
+      if (res.status === 400) {
         alert("이미 존재하는 계정입니다.");
       }
+    } catch (error) {
+      console.error(error);
     }
   };
 
