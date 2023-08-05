@@ -7,7 +7,6 @@ export default function SignUp() {
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
   const [isbutton, setIsButton] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
