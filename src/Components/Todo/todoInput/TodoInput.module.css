@@ -1,0 +1,21 @@
+.toDoInput {
+  text-align: center;
+}
+.toDoInput input {
+  width: 300px;
+  height: 40px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  border: 2px solid rgb(95, 150, 160);
+  border-radius: 10px;
+  vertical-align: top;
+}
+.toDoInput button {
+  border: none;
+  color: rgb(166, 192, 231);
+  margin-left: 45px;
+}
+.plusIcon {
+  color: rgb(95, 150, 160);
+}

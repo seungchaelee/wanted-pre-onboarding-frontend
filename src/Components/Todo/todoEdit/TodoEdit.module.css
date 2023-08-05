@@ -1,0 +1,42 @@
+.checked {
+  font-size: 20px;
+  color: rgb(51, 51, 192);
+  overflow: hidden;
+  word-wrap: break-word;
+  text-decoration-line: line-through;
+}
+
+.unChecked {
+  font-size: 20px;
+  color: rgb(95, 150, 160);
+  overflow: hidden;
+  word-wrap: break-word;
+  text-decoration-line: none;
+}
+
+.changeInput {
+  border: 2px solid rgb(95, 150, 160);
+  border-radius: 5px;
+  height: 20px;
+  width: 200px;
+  padding: 5px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.changeDone,
+.changeCancel {
+  font-size: 15px;
+}
+
+.pen {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.x {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+}

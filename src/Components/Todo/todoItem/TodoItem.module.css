@@ -1,0 +1,30 @@
+.checkBox {
+  color: rgb(95, 150, 160);
+}
+
+.changeInput {
+  border: 2px solid rgb(95, 150, 160);
+  border-radius: 5px;
+  height: 20px;
+  width: 200px;
+  padding: 5px;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.changeDone,
+.changeCancel {
+  font-size: 15px;
+}
+
+.trash {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.x {
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+}
