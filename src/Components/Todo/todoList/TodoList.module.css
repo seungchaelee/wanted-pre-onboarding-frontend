@@ -4,7 +4,7 @@
 .TodoList li {
   background: rgb(240, 242, 245);
   padding: 15px 30px;
-  color: rgb(95, 36, 95);
+  color: pink;
   font-weight: bold;
   list-style: none;
 }
@@ -13,17 +13,17 @@
   cursor: pointer;
 }
 .TodoList li.on span {
-  color: rgb(199, 197, 197);
+  color: pink;
 }
 .TodoList li em {
   cursor: pointer;
 }
 .TodoList li.on em {
-  color: rgb(199, 197, 197);
-  text-decoration: line-through rgb(159, 127, 231);
+  color: pink;
+  text-decoration: line-through pink;
 }
 .TodoList li button {
   float: right;
   border: none;
-  color: rgb(148, 181, 230);
+  color: pink;
 }

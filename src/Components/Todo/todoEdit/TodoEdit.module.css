@@ -1,6 +1,6 @@
 .checked {
   font-size: 20px;
-  color: rgb(51, 51, 192);
+  color: pink;
   overflow: hidden;
   word-wrap: break-word;
   text-decoration-line: line-through;
@@ -8,14 +8,14 @@
 
 .unChecked {
   font-size: 20px;
-  color: rgb(95, 150, 160);
+  color: pink;
   overflow: hidden;
   word-wrap: break-word;
   text-decoration-line: none;
 }
 
 .changeInput {
-  border: 2px solid rgb(95, 150, 160);
+  border: 2px solid pink;
   border-radius: 5px;
   height: 20px;
   width: 200px;

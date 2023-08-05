@@ -1,9 +1,9 @@
 .checkBox {
-  color: rgb(95, 150, 160);
+  color: pink;
 }
 
 .changeInput {
-  border: 2px solid rgb(95, 150, 160);
+  border: 2px solid pink;
   border-radius: 5px;
   height: 20px;
   width: 200px;
